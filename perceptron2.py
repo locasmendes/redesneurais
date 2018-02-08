@@ -32,7 +32,15 @@ def treinar():
             for j in range(len(pesos)):
                 pesos[j] = pesos[j] + (taxaAprendizagem * entradas[i][j] * erro)
                 print('Peso atualizado: ' + str(pesos[j]))
-            print('Total de erros: ' + str(erroTotal))
+                print('Total de erros: ' + str(erroTotal))
+                print('0 e 0 - Esperado: 0 | Saída: ' +str(calculaSaida(entradas[0])))
+                print('0  e 1 - Esperado: 0 | Saída: ' +str(calculaSaida(entradas[1])))
+                print('1 e 0 - Esperado: 0 | Saída: ' +str(calculaSaida(entradas[2])))
+                print('1 e 1 - Esperado: 1 | Saída: ' +str(calculaSaida(entradas[3])))
 
 treinar()
 print('Aprendido!')
+print('0 e 0 - Esperado: 0 | Saída: ' +str(calculaSaida(entradas[0])))
+print('0 e 1 - Esperado: 0 | Saída: ' +str(calculaSaida(entradas[1])))
+print('1 e 0 - Esperado: 0 | Saída: ' +str(calculaSaida(entradas[2])))
+print('1 e 1 - Esperado: 1 | Saída: ' +str(calculaSaida(entradas[3])))
